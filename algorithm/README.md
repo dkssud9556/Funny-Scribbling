@@ -1,6 +1,8 @@
 # Algorithm
 
-{% page-ref page="undefined.md" %}
+{% page-ref page="euclidean-algorithm.md" %}
+
+
 
 
 
