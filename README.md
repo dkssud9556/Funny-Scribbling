@@ -6,5 +6,7 @@ description: A page that records what I studied
 
 {% page-ref page="algorithm/" %}
 
+{% page-ref page="git/" %}
+
 
 
