@@ -4,5 +4,7 @@
 
 {% page-ref page="git-4-status.md" %}
 
+{% page-ref page="commit.md" %}
+
 
 
