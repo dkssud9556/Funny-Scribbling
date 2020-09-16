@@ -6,5 +6,7 @@
 
 {% page-ref page="commit.md" %}
 
+{% page-ref page="git-head-reset.md" %}
+
 
 
