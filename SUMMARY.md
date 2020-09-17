@@ -1,6 +1,8 @@
 # Table of contents
 
 * [Study!! ✍️✍️✍️](README.md)
+* [JavaScript](javascript/README.md)
+  * [Data Type](javascript/data-type.md)
 * [Java](java/README.md)
   * [JDK, JRE, JVM](java/jdk-jre-jvm.md)
 * [Git](git/README.md)
