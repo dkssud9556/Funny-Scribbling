@@ -10,7 +10,7 @@
   * [Git의 3가지 작업 영역](git/git-3-area.md)
 * [Algorithm](algorithm/README.md)
   * [문제풀이](algorithm/undefined/README.md)
-    * [\[프로그래머스\] 스킬트리](algorithm/undefined/undef.md)
+    * [\[프로그래머스\] 스킬트리](algorithm/undefined/skill.md)
   * [에라토스테네스의 체](algorithm/eratosthenes.md)
   * [유클리드 호제법](algorithm/euclidean-algorithm.md)
 
