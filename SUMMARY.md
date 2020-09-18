@@ -6,6 +6,7 @@
 * [Java](java/README.md)
   * [JDK, JRE, JVM](java/jdk-jre-jvm.md)
 * [Git](git/README.md)
+  * [Remote Repository의 브랜치](git/remote-repository.md)
   * [Git HEAD와 reset](git/git-head-reset.md)
   * [Commit 가이드라인](git/commit.md)
   * [Git 파일의 4가지 상태](git/git-4-status.md)

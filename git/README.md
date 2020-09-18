@@ -8,5 +8,7 @@
 
 {% page-ref page="git-head-reset.md" %}
 
+{% page-ref page="remote-repository.md" %}
+
 
 
