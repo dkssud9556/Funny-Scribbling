@@ -10,5 +10,7 @@
 
 {% page-ref page="remote-repository.md" %}
 
+{% page-ref page="head.md" %}
+
 
 
