@@ -12,5 +12,7 @@
 
 {% page-ref page="head.md" %}
 
+{% page-ref page="git-reset.md" %}
+
 
 
