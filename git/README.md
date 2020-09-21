@@ -10,5 +10,9 @@
 
 {% page-ref page="remote-repository.md" %}
 
+{% page-ref page="head.md" %}
+
+{% page-ref page="git-reset.md" %}
+
 
 

@@ -10,5 +10,7 @@ description: A page that records what I studied
 
 {% page-ref page="java/" %}
 
+{% page-ref page="javascript/" %}
+
 
 
