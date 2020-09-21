@@ -6,5 +6,7 @@
 
 {% page-ref page="problem-solving/" %}
 
+{% page-ref page="dynamic-programming.md" %}
+
 
 
