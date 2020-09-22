@@ -14,9 +14,10 @@
   * [Git 파일의 4가지 상태](git/git-4-status.md)
   * [Git의 3가지 작업 영역](git/git-3-area.md)
 * [Algorithm](algorithm/README.md)
-  * [Dynamic Programming](algorithm/dynamic-programming.md)
+  * [Concept](algorithm/concept/README.md)
+    * [Euclidean Algorithm](algorithm/concept/euclidean-algorithm.md)
+    * [Eratosthenes Sieve](algorithm/concept/eratosthenes.md)
+    * [Dynamic Programming](algorithm/concept/dynamic-programming.md)
   * [Problem Solving](algorithm/problem-solving/README.md)
     * [\[Programmers\] skill-tree](algorithm/problem-solving/skill.md)
-  * [Eratosthenes Sieve](algorithm/eratosthenes.md)
-  * [Euclidean Algorithm](algorithm/euclidean-algorithm.md)
 
