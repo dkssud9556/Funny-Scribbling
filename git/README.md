@@ -14,5 +14,7 @@
 
 {% page-ref page="git-reset.md" %}
 
+{% page-ref page="merge.md" %}
+
 
 

@@ -6,6 +6,7 @@
 * [Java](java/README.md)
   * [JDK, JRE, JVM](java/jdk-jre-jvm.md)
 * [Git](git/README.md)
+  * [Merge의 종류](git/merge.md)
   * [Git reset](git/git-reset.md)
   * [HEAD와 브랜치의 관계](git/head.md)
   * [Remote Repository의 브랜치](git/remote-repository.md)
