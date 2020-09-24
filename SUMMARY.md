@@ -2,6 +2,7 @@
 
 * [Study!! ✍️✍️✍️](README.md)
 * [JavaScript](javascript/README.md)
+  * [Expression and Statement](javascript/expression-and-statement.md)
   * [Data Type](javascript/data-type.md)
 * [Java](java/README.md)
   * [JDK, JRE, JVM](java/jdk-jre-jvm.md)
