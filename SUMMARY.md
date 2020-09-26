@@ -7,6 +7,7 @@
 * [Java](java/README.md)
   * [JDK, JRE, JVM](java/jdk-jre-jvm.md)
 * [Git](git/README.md)
+  * [Git 명령어 정리](git/git.md)
   * [Git fetch](git/git-fetch.md)
   * [Merge의 종류](git/merge.md)
   * [Git reset](git/git-reset.md)

@@ -18,5 +18,7 @@
 
 {% page-ref page="git-fetch.md" %}
 
+{% page-ref page="git.md" %}
+
 
 
