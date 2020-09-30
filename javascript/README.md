@@ -1,5 +1,5 @@
 ---
-description: 'reference : poiemaweb.com, 인사이드 자바스크립트'
+description: 'reference : poiemaweb.com'
 ---
 
 # JavaScript
@@ -7,8 +7,6 @@ description: 'reference : poiemaweb.com, 인사이드 자바스크립트'
 {% page-ref page="data-type.md" %}
 
 {% page-ref page="expression-and-statement.md" %}
-
-{% page-ref page="object-type.md" %}
 
 
 
