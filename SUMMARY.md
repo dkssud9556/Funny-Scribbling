@@ -2,6 +2,7 @@
 
 * [Study!! ✍️✍️✍️](README.md)
 * [JavaScript](javascript/README.md)
+  * [Function](javascript/function.md)
   * [Array-like object](javascript/array-like-object.md)
   * [Array](javascript/array.md)
   * [Object Type](javascript/object-type.md)
