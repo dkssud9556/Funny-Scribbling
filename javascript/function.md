@@ -154,3 +154,35 @@ add.prop2; // 13
    * prototype 프로퍼티는 함수 자신이 생성자 함수로 호출되었을 때 생성된 객체의 부모 역할을 하는 프로토타입 객체를 뜻한다.
    * prototype 프로퍼티는 함수가 생성될 때 만들어지며, prototype 프로퍼티가 가리키는 객체\(만들어진함수.prototype\)는 constructor 프로퍼티를 가지게 된다. 이 constructor 프로퍼티는 만들어진함수를 가리키게 된다.
 
+### 함수의 여러 형태 
+
+1. 콜백 함수 
+
+   * 콜백 함수는 개발자는 등록만 해놓고 특정 이벤트가 발생했거나 특정 시점이 되었을 때 시스템이 호출하는 함수를 뜻한다.
+   * 특정 함수의 인자로 넘겨서, 코드 내부에서 호출되는 함수도 콜백 함수다.
+   * 보통 익명 함수를 사용하여 인자로 넘긴다.
+
+   ```text
+   function executeCallback(callback) {
+       callback();
+   }
+
+   executeCallback(function() {
+       console.log('callback function is executed');
+   }); // 'callback function is executed'
+   ```
+
+2. 즉시 실행 함수 
+
+   * 함수를 정의하는 동시에 실행되는 함수를 즉시 실행 함수라고 한다.
+   * 즉시 실행 함수는 한 번 실행되고 다시 호출할 수 없는 함수다.
+   * 보통 익명 함수로 정의한다. 이름을 명시할 수 있지만 그렇다고 해서 다시 호출할 수는 없다.
+
+   ```text
+   (function (msg) {
+       console.log(msg);
+   })('hello'); // 'hello'
+   ```
+
+
+
