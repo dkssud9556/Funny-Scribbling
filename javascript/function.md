@@ -279,3 +279,38 @@ sum(2, 5, 9, 10); // 26
 
 그리고 유사 배열 객체이므로 this 바인딩을 통 배열의 표준 메소드를 사용할 수 있다.
 
+### this 바인딩 
+
+함수를 호출하면 방금 정리한 arguments 객체와 함께 this 인자가 함수 내부로 전달된다. 자바스크립트의 this는 함수의 호출 방식에 따라 다른 객체를 참조한다.
+
+#### 객체의 메소드 호출 시 this 바인딩 
+
+객체의 메소드 내부의 this는 메소드를 호출한 객체를 참조한다.
+
+```text
+var person = {
+    name: 'Park',
+    age: 19,
+    introduce: function() {
+        console.log("Hello, I'm " + this.name + ' and ' + this.age + ' years old.'
+    }
+}
+
+person.introduce(); // "Hello, I'm Park and 19 years old."
+
+var otherPerson = {
+    name: 'Kim',
+    age: 30
+}
+
+otherPerson.introduce = person.introduce;
+
+otherPerson.introduce(); // "Hello, I'm Kim and 30 years old."
+```
+
+introduce 메소드는 간단하게 name, age 프로퍼티를 출력하는 기능을 한다. 앞에서 말했던 것처럼 this는 메소드를 호출한 객체로 바인딩된다는 것을 알 수 있다.
+
+#### 함수 호출 시 this 바인딩 
+
+일반적인 함수를 호출할 때 this는 전역 객체가 바인딩 된다. 전역 객체는 브라우저에서는 window, Node.js 환경에서는 global 객체가 된다.
+
