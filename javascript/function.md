@@ -368,3 +368,57 @@ obj.outer();
 2. 빈 객체로 바인딩된 this를 통해서 빈 객체의 프로퍼티나 메소드를 동적으로 생성한다.
 3. 생성된 객체를 리턴한다. 생성자 함수를 굳이 this를 리턴하지 않아도 알아서 생성된 객체를 리턴한다. 그런데 만약에 this가 아닌 다른 객체를 반환하면 새로 생성한 객체가 아니라 다른 객체를 반환한다.
 
+### 생성자 함수를 new 없이 호출하면? 
+
+자바스크립트에서 함수는 생성자 함수와 일반 함수가 별도의 구분이 없다고 했다. 따라서 생성자 함수를 new 없이 호출할 수 있는데, 그러면 this는 당연히 전역 객체로 바인딩된다. 그래서 생성자 함수를 new 없이 호출했을 때를 대비하기 위한 예방책이 있다.
+
+```text
+function Person(name, age) {
+    if (!(this instanceof Person)) {
+        return new Person(name, age);
+    }
+    this.name = name;
+    this.age = age;
+}
+
+var p1 = new Person('Lee', 19);
+var p2 = Person('Kim', 38);
+```
+
+### call과 apply를 이용한 명시적 this 바인딩 
+
+자바스크립트에서 자동으로 this를 바인딩하는 방법뿐만 아니라 call과 apply라는 메소드를 이용해서 명시적으로 this를 바인딩하는 방법이 있다.
+
+call, apply 메소드는 함수 객체의 기본 메소드이다. \(Function.prototype 객체의 메소드\)
+
+call, apply 메소드는 매개변수로 this에 바인딩할 객체와 함수에 매개변수로 넘길 인자들을 받는다. call, apply는 this에 명시적으로 바인딩하는 것은 같지만 인자를 넘기는 방법이 다르다. apply는 인자들을 배열로 넘기고, call은 인자들을 하나씩 넘긴다.
+
+```text
+function Person(name, age) {
+    this.name = name;
+    this.age = age;
+}
+
+var obj = {};
+
+Person.apply(obj, ['Big', 18]);
+obj; // { name: 'Big', age: 18, __proto__: Object.prototype }
+
+var obj2 = {};
+
+Person.call(obj2, 'Small', 13);
+obj2; // { name: 'Small', age: 13, __proto__: Object.prototype }
+```
+
+apply, call을 이용해서 arguments 객체와 같은 유사 배열 객체에서 배열 메소드를 사용할 수 있다고 했다. 다음 예를 보면 알 수 있다.
+
+```text
+function returnArgs() {
+    return Array.prototype.slice.call(arguments);
+}
+
+returnArgs(1, 'good', true); // [1, 'good', true]
+```
+
+slice 메소드 말고도 다른 배열 메소드를 사용할 수 있다.
+
