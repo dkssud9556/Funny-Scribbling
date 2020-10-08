@@ -474,3 +474,26 @@ obj 객체는 sayTitle이라는 메소드를 가지고 있기 때문에 결과�
 
 즉, 위 예제의 obj 객체는 hasOwnProperty 메소드를 호출했을 때 자신의 프로퍼티에서 찾아봤는데 없기 때문에 부모 프로토타입 객체인 Object.prototype 객체로 넘어가서 해당 메소드를 찾아서 호출한다.
 
+#### 생성자 함수 
+
+자바스크립트에서 생성자 함수에 의해 생성된 객체는 생성자 함수의 prototype 프로퍼티가 가리키는 객체를 자신의 부모 프로토타입 객체로 취급한다.
+
+```text
+function Person(name, age) {
+    this.name = name;
+    this.age = age;
+}
+
+var p1 = new Person('Greg', 48);
+
+p1.hasOwnProperty('name'); // true
+```
+
+* Person 생성자 함수로 인해 생성된 p1 객체는 Person.prototype 프로퍼티가 가리키는 객체를 부모 프로토타입 객체로 취급한다.
+* 따라서 hasOwnProperty 메소드를 호출하면 현재 자신에게 없기 때문에 프로토타입 객체인 Person.prototype 객체에서 찾는다.
+* 하지만 Person.prototype 객체는 프로토타입 객체의 기존 상태\(constructor 프로퍼티만 존재\)이기 때문에 hasOwnProperty 메소드가 존재하지 않는다.
+* Person.prototype 객체도 객체이기 때문에 프로토타입 객체가 존재한다. 바로 Object.prototype 객체이다. 그렇기 때문에 Object.prototype으로 프로토타입 체이닝이 이어진다.
+* hasOwnProperty 메소드를 정상적으로 실행한다.
+
+> 프로토타입 체이닝의 끝은 모든 객체의 프로토타입 객체인 Object.prototype 객체이다. 따라서 Object.prototype에 정의된 메소드는 자바스크립트의 모든 객체가 호출할 수 있다.
+
