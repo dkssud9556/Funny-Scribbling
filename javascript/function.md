@@ -445,5 +445,32 @@ slice 메소드 말고도 다른 배열 메소드를 사용할 수 있다.
 
 반면에 prototype 프로퍼티는 모든 함수 객체에 있는 것이며, 자신을 생성자 함수로 호출했을 때 생성된 객체의 \[\[Prototype\]\] 링크가 가리키게 된다.
 
-\[\[Prototype\]\] 링크를 파이어폭스, 크롬과 같은 브라우저에서는 \_\_proto\_\_라는 프로퍼티로 나타낸다. \(ECMAScript에서는 \[\[Prototype\]\] 프로퍼티가 내부적으로만 사용된다고 명시한다.\)
+\[\[Prototype\]\] 링크를 파이어폭스, 크롬과 같은 브라우저에서는 \_\_proto\_\_라는 프로퍼티로 나타낸다.
+
+> ECMAScript에서는 \[\[Prototype\]\] 프로퍼티가 내부적으로만 사용된다고 명시한다.
+
+#### 객체 리터럴 방식 
+
+```text
+var obj = {
+    title: 'Rapunzel',
+    sayTitle: function() {
+        console.log(this.title);
+    }
+};
+
+obj.sayTitle(); // Rapunzel
+obj.hasOwnProperty('title'); // true
+obj.hasOwnProperty('author'); // false
+```
+
+obj 객체는 sayTitle이라는 메소드를 가지고 있기 때문에 결과가 this.title 값으로 잘 나온다. 그런데 그 밑에 hasOwnProperty라는 메소드를 호출하고 있는 것을 볼 수 있다. 이 메소드는 객체를 생성할 때 선언하지 않은 메소드인데도 잘 호출된다.
+
+> hasOwnProperty 메소드는 인자로 넘긴 문자열 이름의 프로퍼티 또는 메소드 객체에 존재하는지 체크하는 자바스크립트 표준 함수다.
+
+그 이유는 객체 리터럴 방식으로 객체를 생성하면 내부적으로 Object 생성자 함수로 객체를 생성하기 때문에 그 객체는 Object.prototype 프로퍼티가 가리키는 프로토타입 객체를 자신의 \[\[Prototype\]\] 링크로 가지게 된다. 이 링크는 프로토타입 체이닝을 가능하게 하는 연결고리다.
+
+프로토타입 체이닝은 객체에서 현재 자신에게 없는 프로퍼티나 메소드에 접근하려 했을 때, \[\[Prototype\]\] 링크를 따라서 부모 프로토타입 객체의 프로퍼티를 차례대로 검색하는 것이다.
+
+즉, 위 예제의 obj 객체는 hasOwnProperty 메소드를 호출했을 때 자신의 프로퍼티에서 찾아봤는데 없기 때문에 부모 프로토타입 객체인 Object.prototype 객체로 넘어가서 해당 메소드를 찾아서 호출한다.
 
