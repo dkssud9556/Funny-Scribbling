@@ -497,3 +497,53 @@ p1.hasOwnProperty('name'); // true
 
 > 프로토타입 체이닝의 끝은 모든 객체의 프로토타입 객체인 Object.prototype 객체이다. 따라서 Object.prototype에 정의된 메소드는 자바스크립트의 모든 객체가 호출할 수 있다.
 
+### 기본 데이터 타입 확장 
+
+Object.prototype 객체에 자바스크립트 모든 객체의 표준 메소드가 정의되어 있는 것처럼 String.prototype, Number.prototype, Array.prototype과 같은 내장 프로토타입 객체도 문자열, 숫자, 배열 등의 표준 메소드를 정의하고 있다.
+
+자바스크립트에서는 위에서 설명한 String.prototype, Number.prototype, Array.prototype, Object.prototype 등과 같은 표준 내장 프로토타입 객체들에도 사용자 정의 메소드를 추가할 수 있다.
+
+```text
+Number.prototype.customMethod = function() {
+    console.log('This is custom method');
+}
+
+let num = 10;
+
+num.customMethod(); // This is custom method
+```
+
+String.prototype, Number.prototype, Array.prototype과 같은 객체들도 결국은 Object.prototype 객체를 프로토타입 객체로 삼는다.
+
+### 프로토타입 메소드의 this 바인딩 
+
+객체의 메소드는 해당 메소드를 호출한 객체가 this로 바인딩 된다. 프로토타입 메소드도 마찬기지다. 
+
+```text
+function Person(name, age) {
+    this.name = name;
+    this.age = age;
+}
+
+Person.prototype.getAge = function() {
+    return this.age;
+}
+
+var p = new Person('Daniel', 19);
+p.getAge(); // 19
+```
+
+분명 getAge 메소드는 Person.prototype 객체에 정의되어 있지만, 프로토타입 체이닝을 통해서 p 객체에서 호출하니 this가 p 객체로 바인딩되는 것을 볼 수 있다.
+
+### 디폴트 프로토타입 객체 변경 
+
+함수를 생성하면 디폴트 프로토타입 객체가 생성되고, prototype 프로퍼티가 가리키게 되지만 이 prototype 프로퍼티가 가리키는 객체를 일반 객체로 변경할 수 있다. 이를 통해 객체지향의 상속을 구현한다.
+
+하지만 주의할 점은 prototype 프로퍼티가 가리키는 객체를 변경하면 변경한 이후에 생성한 객체들은 바뀐 프로토타입 객체를 가지게 되지만, 그전에 생성한 객체들은 원래의 프로토타입 객체를 그대로 가리킨다는 점이다.
+
+### 상황 차별하는 프로토타입 체이닝 
+
+프로토타입 체이닝은 객체의 프로퍼티를 읽거나 메소드를 호출할 때만 발생한다.
+
+프로퍼티를 생성하거나 메소드를 정의할 때는 그 객체에 생성, 정의한다.
+
