@@ -78,5 +78,32 @@ global.str; // undefined
 global.str2; // node.JS
 ```
 
+## 스코프 체인 
 
+C, Java와 같은 언어에서 변수의 유효 범위는 중괄호로 묶여있는 범위다. 함수의 중괄호뿐만 아니라 if, for문의 중괄호도 변수의 유효 범위를 결정한다. 하지만 자바스크립트에서 if, for문 등의 중괄호는 유효 범위가 없다. 오직 함수만이 유효 범위의 한 단위가 된다. 유효 범위를 나타내는 스코프가 \[\[scope\]\] 프로퍼티로 각 함수 객체 내에서 연결 리스트 형식으로 관리되며, 이를 스코프 체인이라고 한다.
+
+### 전역 실행 컨텍스트 
+
+```text
+var str = 'JavaScript';
+var num = 50;
+console.log(str); // JavaScript
+console.log(num); // 50
+```
+
+이 코드는 전역 코드이기 때문에 스코프 체인의 제일 최상위에 있다. 따라서 상위 스코프가 존재하지 않으며, \[\[scope\]\] 프로퍼티는 자기 자신을 가리킨다. 
+
+### 함수 호출 시 실행 컨텍스트 
+
+```text
+var value = 'global';
+function func() {
+    var value = 'local';
+    console.log(value); // local
+}
+func();
+console.log(value); // global
+```
+
+이 코드는 전역 컨텍스트가 만들어진 후에 func 함수의 컨텍스트가 만들어진다. func 함수의 스코프 체인은 실행된 함수의 \[\[scope\]\] 프로퍼티를 그대로 복사한 후, 현재 생성된 변수 객체를 복사한 스코프 체인의 맨 앞에 추가한다. 따라서 func 실행 컨텍스트의 스코프 체인은 \(func 변수 객체 -&gt; 전역 객체\)가 된다. 먼저 스코프 체인의 맨 앞에 위치한 변수 객체인 func 변수 객체에서 value 변수를 찾는데, value 변수가 존재하기 때문에 'local'이 담긴 value를 참조한다. 만약 func 변수 객체에 value 변수가 존재하지 않으면 스코프 체인을 따라서 전역 객체에서 value 변수를 탐색한다.
 
