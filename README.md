@@ -14,7 +14,5 @@ description: A page that records what I studied
 
 {% page-ref page="ddd/" %}
 
-{% page-ref page="spring-security/" %}
-
 
 
