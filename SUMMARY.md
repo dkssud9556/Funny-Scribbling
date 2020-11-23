@@ -1,8 +1,8 @@
 # Table of contents
 
 * [Study!! ✍️✍️✍️](README.md)
-* [Spring Security](spring-security/README.md)
-  * [의존성 추가](spring-security/undefined.md)
+* [Clean Architecture](clean-architecture/README.md)
+  * [1장. 설계와 아키텍처란?](clean-architecture/1-..md)
 * [DDD](ddd/README.md)
   * [1. 도메인 모델 시작](ddd/1..md)
 * [JavaScript](javascript/README.md)
