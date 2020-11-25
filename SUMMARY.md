@@ -2,6 +2,7 @@
 
 * [Study!! ✍️✍️✍️](README.md)
 * [Clean Architecture](clean-architecture/README.md)
+  * [2장. 두 가지 가치에 대한 이야기](clean-architecture/2-..md)
   * [1장. 설계와 아키텍처란?](clean-architecture/1-..md)
 * [DDD](ddd/README.md)
   * [1. 도메인 모델 시작](ddd/1..md)
