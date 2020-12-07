@@ -2,6 +2,7 @@
 
 * [Study!! ✍️✍️✍️](README.md)
 * [Clean Architecture](clean-architecture/README.md)
+  * [6장. 함수형 프로그래밍](clean-architecture/6-..md)
   * [5장. 객체 지향 프로그래밍](clean-architecture/5-..md)
   * [4장. 구조적 프로그래밍](clean-architecture/4-..md)
   * [3장. 패러다임 개요](clean-architecture/3-..md)
