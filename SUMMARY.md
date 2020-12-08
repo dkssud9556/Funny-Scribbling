@@ -2,6 +2,7 @@
 
 * [Study!! ✍️✍️✍️](README.md)
 * [Clean Architecture](clean-architecture/README.md)
+  * [7장. SRP: 단일 책임 원칙](clean-architecture/7-.-srp.md)
   * [6장. 함수형 프로그래밍](clean-architecture/6-..md)
   * [5장. 객체 지향 프로그래밍](clean-architecture/5-..md)
   * [4장. 구조적 프로그래밍](clean-architecture/4-..md)
