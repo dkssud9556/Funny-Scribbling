@@ -10,11 +10,5 @@
 
 {% page-ref page="5-..md" %}
 
-{% page-ref page="6-..md" %}
-
-{% page-ref page="7-.-srp.md" %}
-
-{% page-ref page="8-.-ocp.md" %}
-
 
 
