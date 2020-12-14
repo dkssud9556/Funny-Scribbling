@@ -18,7 +18,5 @@
 
 {% page-ref page="9-.-lsp.md" %}
 
-{% page-ref page="10-.-isp.md" %}
-
 
 
