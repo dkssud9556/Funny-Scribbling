@@ -38,6 +38,7 @@
 * [Algorithm](algorithm/README.md)
   * [Baekjoon](algorithm/baekjoon/README.md)
     * [Bronze](algorithm/baekjoon/bronze/README.md)
+      * [이항계수](algorithm/baekjoon/bronze/undefined-1.md)
       * [셀프 넘버](algorithm/baekjoon/bronze/undefined.md)
   * [Concept](algorithm/concept/README.md)
     * [Euclidean Algorithm](algorithm/concept/euclidean-algorithm.md)
