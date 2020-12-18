@@ -2,6 +2,7 @@
 
 * [Study!! ✍️✍️✍️](README.md)
 * [Clean Architecture](clean-architecture/README.md)
+  * [11장. DIP: 의존성 역전 원칙](clean-architecture/11-.-dip.md)
   * [10장. ISP: 인터페이스 분리 원칙](clean-architecture/10-.-isp.md)
   * [9장. LSP: 리스코프 치환 법칙](clean-architecture/9-.-lsp.md)
   * [8장. OCP: 개방-폐쇄 원칙](clean-architecture/8-.-ocp.md)
