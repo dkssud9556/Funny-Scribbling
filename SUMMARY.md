@@ -37,6 +37,9 @@
   * [Git 파일의 4가지 상태](git/git-4-status.md)
   * [Git의 3가지 작업 영역](git/git-3-area.md)
 * [Algorithm](algorithm/README.md)
+  * [Programmers](algorithm/programmers/README.md)
+    * [소수 찾기](algorithm/programmers/undefined.md)
+    * [skill-tree](algorithm/programmers/skill.md)
   * [Baekjoon](algorithm/baekjoon/README.md)
     * [Bronze](algorithm/baekjoon/bronze/README.md)
       * [평균](algorithm/baekjoon/bronze/undefined-2.md)
@@ -46,6 +49,4 @@
     * [Euclidean Algorithm](algorithm/concept/euclidean-algorithm.md)
     * [Eratosthenes Sieve](algorithm/concept/eratosthenes.md)
     * [Dynamic Programming](algorithm/concept/dynamic-programming.md)
-  * [Problem Solving](algorithm/problem-solving/README.md)
-    * [\[Programmers\] skill-tree](algorithm/problem-solving/skill.md)
 

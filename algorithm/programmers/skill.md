@@ -1,8 +1,6 @@
-# \[Programmers\] skill-tree
+# skill-tree
 
 문제 출처 : [https://programmers.co.kr/learn/courses/30/lessons/49993](https://programmers.co.kr/learn/courses/30/lessons/49993)
-
-프로그래머스의 코딩테스트 연습에서 Level 1 문제를 다 풀고 Level 2 문제를 찾아보다가 풀게되었다. 앞으로 꾸준히 알고리즘 문제를 풀고 글로 기록할 생각이다. 
 
 ### 문제 
 
