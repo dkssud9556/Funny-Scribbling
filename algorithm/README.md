@@ -2,9 +2,9 @@
 
 {% page-ref page="baekjoon/" %}
 
-{% page-ref page="concept/" %}
+{% page-ref page="baekjoon/" %}
 
-{% page-ref page="programmers/" %}
+{% page-ref page="concept/" %}
 
 
 
