@@ -38,6 +38,7 @@
   * [Git의 3가지 작업 영역](git/git-3-area.md)
 * [Algorithm](algorithm/README.md)
   * [Programmers](algorithm/programmers/README.md)
+    * [124 나라의 숫자](algorithm/programmers/124.md)
     * [문자열 압축](algorithm/programmers/undefined-1.md)
     * [소수 찾기](algorithm/programmers/undefined.md)
     * [skill-tree](algorithm/programmers/skill.md)
