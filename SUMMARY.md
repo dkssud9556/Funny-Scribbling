@@ -38,6 +38,7 @@
   * [Git의 3가지 작업 영역](git/git-3-area.md)
 * [Algorithm](algorithm/README.md)
   * [Programmers](algorithm/programmers/README.md)
+    * [프린터](algorithm/programmers/undefined-4.md)
     * [최대 수식화](algorithm/programmers/undefined-3.md)
     * [영어 끝말잇기](algorithm/programmers/undefined-2.md)
     * [124 나라의 숫자](algorithm/programmers/124.md)
